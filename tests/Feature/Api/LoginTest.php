@@ -35,7 +35,7 @@ class LoginTest extends TestCase
 
         $this->assertTrue(
             (count(explode('.', $response->json()['user']['token'])) === 3),
-             'Failed to validate token'
+            'Failed to validate token'
         );
     }
 

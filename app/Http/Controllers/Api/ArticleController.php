@@ -59,7 +59,7 @@ class ArticleController extends ApiController
 
         if ($inputTags && ! empty($inputTags)) {
 
-            $tags = array_map(function($name) {
+            $tags = array_map(function ($name) {
                 return Tag::firstOrCreate(['name' => $name])->id;
             }, $inputTags);
 

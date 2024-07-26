@@ -13,7 +13,7 @@ class CreateComment extends ApiRequest
     {
         return $this->get('comment') ?: [];
     }
-    
+
     /**
      * Get the validation rules that apply to the request.
      *

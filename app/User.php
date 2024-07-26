@@ -11,7 +11,9 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 class User extends Authenticatable implements JWTSubject
 {
-    use Notifiable, Followable, HasFavorite;
+    use Notifiable;
+    use Followable;
+    use HasFavorite;
 
     /**
      * The attributes that are mass assignable.

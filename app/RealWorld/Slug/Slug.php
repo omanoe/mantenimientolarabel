@@ -32,7 +32,7 @@ class Slug
      *
      * @var string
      */
-    const SEPARATOR = '-';
+    public const SEPARATOR = '-';
 
     /**
      * Slug constructor.

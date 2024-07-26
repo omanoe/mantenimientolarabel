@@ -90,8 +90,8 @@ class Handler extends ExceptionHandler
              * ]
              */
 
-            $validationErrors = array_map(function($error) {
-                return array_map(function($message) {
+            $validationErrors = array_map(function ($error) {
+                return array_map(function ($message) {
                     return remove_words($message, 2);
                 }, $error);
             }, $validationErrors);

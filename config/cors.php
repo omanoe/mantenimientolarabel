@@ -18,4 +18,3 @@ return [
     'exposedHeaders' => [],
     'maxAge' => 864000,
 ];
-
