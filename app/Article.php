@@ -9,7 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    use Favoritable, Filterable, HasSlug;
+    use Favoritable;
+    use Filterable;
+    use HasSlug;
 
     /**
      * The attributes that are mass assignable.
@@ -48,8 +50,8 @@ class Article extends Model
     public function scopeLoadRelations($query)
     {
         return $query->with(['user.followers' => function ($query) {
-                $query->where('follower_id', auth()->id());
-            }])
+            $query->where('follower_id', auth()->id());
+        }])
             ->with(['favorited' => function ($query) {
                 $query->where('user_id', auth()->id());
             }])

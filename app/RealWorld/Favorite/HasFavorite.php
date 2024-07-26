@@ -14,8 +14,7 @@ trait HasFavorite
      */
     public function favorite(Article $article)
     {
-        if (! $this->hasFavorited($article))
-        {
+        if (! $this->hasFavorited($article)) {
             return $this->favorites()->attach($article);
         }
     }
