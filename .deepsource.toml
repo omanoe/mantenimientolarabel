@@ -3,5 +3,8 @@ version = 1
 [[analyzers]]
 name = "php"
 
-[[transformers]]
-name = "php-cs-fixer"
+  [analyzers.meta]
+  bootstrap_files = ["4"]
+
+[[analyzers]]
+name = "javascript"
